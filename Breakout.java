@@ -75,9 +75,8 @@ public class Breakout extends JPanel {
             endGame();
         }
         if (isGameOver) {
-            String endText = bricks.size() == 0 ? "Game over! You win!" : "Game over! You lose.";
             g.setFont(new Font("Arial Rounded MT", Font.BOLD, 25));
-            g.drawString(endText, 75, 150);
+            g.drawString(bricks.size() == 0 ? "Game over! You win!" : "Game over! You lose.", 75, 150);
         }
         for (int x = bricks.size() - 1; x >= 0; x--) {
             bricks.get(x).paint(g);
